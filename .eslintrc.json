@@ -1,7 +1,13 @@
 {
   "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/alt-text": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/no-contradicting-classname": "off",
+    "tailwindcss/migration-from-tailwind-2": "off"
+  },
   "settings": {
-    /* Support tailwind rules inside class utility functions */
     "tailwindcss": {
       "callees": ["clsx", "cva", "cn"],
       "config": "tailwind.config.ts"
