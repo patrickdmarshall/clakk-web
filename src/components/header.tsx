@@ -1,23 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingCart, User } from "lucide-react";
-import Link from "next/link";
-
-import { Logo2 } from "@/components/logo2";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+import { Logo2 } from "./logo2";
+import { DropdownMenu } from "./dropdown-menu";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { MobileNavbar } from "@/components/mobile-navbar";
 import { MobileNavItem2 } from "@/components/mobile-nav-item2";
+import {
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
+import { ShoppingCart, User } from "lucide-react";
+import Link from "next/link";
 export function Header() {
   return (
     <motion.header

@@ -20,30 +20,6 @@ export function Footer() {
         <a href="/guides" className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]">
           Guides
         </a>
-        <a href="/guides" className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]">
-          Shop
-        </a>
-      </div>
-      <div className="mt-10 flex basis-1/2 flex-col gap-5 md:mt-0 md:basis-auto">
-        <h3 className="font-semibold">Resources</h3>
-        <a
-          href="/discord"
-          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
-        >
-          Discord
-        </a>
-        <a
-          href="/discord"
-          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
-        >
-          Facebook
-        </a>
-        <a
-          href="/discord"
-          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
-        >
-          Trustpilot
-        </a>
       </div>
     </footer>
   );

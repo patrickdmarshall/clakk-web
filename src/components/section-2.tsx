@@ -36,7 +36,8 @@ export function Section2() {
               src="/images/jah.png"
               width={600}
               height={600}
-              className="size-full bg-primary/10 object-cover p-20"
+              alt="A description of the image" // Add this line
+              className="object-cover"
             />
           </div>
         </div>
