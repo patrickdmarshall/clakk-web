@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Logo2 } from "./logo2";
 import { DropdownMenu } from "./dropdown-menu";
@@ -9,8 +7,18 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { MobileNavbar } from "@/components/mobile-navbar";
 import { MobileNavItem2 } from "@/components/mobile-nav-item2";
+import {
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
+import { ShoppingCart, User } from "lucide-react";
+import Link from "next/link";
+import { useCart } from "@/hooks/useCart"; // Assuming you have a useCart hook or context
 
 export function Header() {
+  const { cartItems, total } = useCart(); // Hook or context to get cart items and total
+
   return (
     <motion.header
       animate={{ opacity: 1 }}
@@ -52,27 +60,32 @@ export function Header() {
                       <div className="relative">
                         <ShoppingCart className="size-5 text-foreground transition-colors hover:text-primary" />
                         <Badge className="absolute -right-2 -top-2 flex size-4 items-center justify-center">
-                          2
+                          {cartItems.length}
                         </Badge>
                       </div>
                     </PopoverTrigger>
                     <PopoverContent className="w-64">
                       <div className="space-y-4">
-                        <div className="flex items-center gap-2">
-                          <div className="size-12 rounded bg-muted" />
-                          <div>
-                            <p className="text-sm font-medium">Item 1</p>
-                            <p className="text-sm text-muted-foreground">$29.99</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="size-12 rounded bg-muted" />
-                          <div>
-                            <p className="text-sm font-medium">Item 2</p>
-                            <p className="text-sm text-muted-foreground">$19.99</p>
-                          </div>
-                        </div>
+                        {/* Dynamically render cart items */}
+                        {cartItems.length === 0 ? (
+                          <p className="text-center text-sm">Your cart is empty</p>
+                        ) : (
+                          cartItems.map((item) => (
+                            <div key={item.id} className="flex items-center gap-2">
+                              <div className="size-12 rounded bg-muted" />
+                              <div>
+                                <p className="text-sm font-medium">{item.name}</p>
+                                <p className="text-sm text-muted-foreground">${item.price}</p>
+                              </div>
+                            </div>
+                          ))
+                        )}
                         <Separator />
+                        {/* Display the total price */}
+                        <div className="flex justify-between text-sm">
+                          <span>Total:</span>
+                          <span>${total}</span>
+                        </div>
                         <Button asChild variant="outline" className="w-full">
                           <a href="/checkout">View Cart</a>
                         </Button>
