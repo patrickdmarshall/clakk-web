@@ -8,17 +8,17 @@ import { ProductCard } from "@/components/product-card";
 
 export function Section() {
   return (
-    <div className="flex flex-col container gap-20 pt-6 pb-10 lg:flex-row">
-      <aside className="w-full space-y-6 w-52 hidden lg:block">
+    <div className="container flex flex-col gap-20 pb-10 pt-6 lg:flex-row">
+      <aside className="hidden w-52 w-full space-y-6 lg:block">
         <div>
-          <h2 className="font-heading text-lg font-semibold mb-2">Search</h2>
-          <div className="flex items-center gap-2 grid-cols-2">
-            <Input type="text" placeholder="" className="h-8 bg-input border" />
+          <h2 className="mb-2 font-heading text-lg font-semibold">Search</h2>
+          <div className="flex grid-cols-2 items-center gap-2">
+            <Input type="text" placeholder="" className="h-8 border bg-input" />
           </div>
         </div>
         <Separator orientation="horizontal" className="my-4" />
         <div>
-          <h2 className="font-heading text-lg font-semibold mb-2">Class</h2>
+          <h2 className="mb-2 font-heading text-lg font-semibold">Class</h2>
           <div className="space-y-2">
             <CheckboxItem label="Amazon" />
             <CheckboxItem label="Assassin" />
@@ -31,7 +31,7 @@ export function Section() {
         </div>
         <Separator orientation="horizontal" className="my-4" />
         <div>
-          <h2 className="font-heading text-lg font-semibold mb-2">Categories</h2>
+          <h2 className="mb-2 font-heading text-lg font-semibold">Categories</h2>
           <div className="space-y-2">
             <CheckboxItem label="Amulets" />
             <CheckboxItem label="Runes" />
@@ -48,16 +48,16 @@ export function Section() {
         </div>
       </aside>
       <main className="flex-1">
-        <div className="flex justify-between items-center mb-6 flex-col items-start gap-4 md:flex-row md:items-center">
+        <div className="mb-6 flex flex-col items-start items-center justify-between gap-4 md:flex-row md:items-center">
           <h1 className="font-heading text-2xl font-bold">Best Sellers</h1>
           <div className="flex items-center gap-4">
             <Button size="sm" variant="outline">
-              <SlidersHorizontal className="w-4 h-4 mr-2" />
+              <SlidersHorizontal className="mr-2 size-4" />
               All Filters
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <ProductCard
             name="10x Jah Rune"
             image="/images/jah.png"

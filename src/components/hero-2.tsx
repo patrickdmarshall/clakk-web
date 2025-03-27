@@ -21,27 +21,27 @@ import { Input } from "@/components/ui/input";
 
 export function Hero2() {
   return (
-    <section className="pb-28 pt-20 bg-gradient-to-b from-background via-70% via-secondary/20">
-      <div className="container flex flex-col items-center gap-8 sm:gap-10 text-[#FFFFFF]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
+    <section className="bg-gradient-to-b from-background via-secondary/20 via-70% pb-28 pt-20">
+      <div className="container flex flex-col items-center gap-8 text-[#FFFFFF] sm:gap-10">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-4 text-center font-heading text-3xl font-bold md:text-4xl">
             Choose Your Adventure
           </h2>
-          <p className="text-muted-foreground text-center mb-12">
+          <p className="mb-12 text-center text-muted-foreground">
             Select from our collection of legendary games
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group relative overflow-hidden rounded-lg border bg-card hover:border-primary transition-colors">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="group relative overflow-hidden rounded-lg border bg-card transition-colors hover:border-primary">
               <div className="absolute inset-0" />
               <Image
                 alt="Diablo II: Resurrected"
                 src="/images/d2r.jpg"
                 width={400}
                 height={500}
-                className="w-full h-[300px] object-cover"
+                className="h-[300px] w-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                <h3 className="text-xl font-heading font-bold text-white mb-2">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                <h3 className="mb-2 font-heading text-xl font-bold text-white">
                   Diablo II: Resurrected
                 </h3>
                 <Button asChild variant="secondary" className="w-full">
@@ -56,10 +56,10 @@ export function Hero2() {
                 src="/images/pd2.jpg"
                 width={400}
                 height={500}
-                className="w-full h-[300px] object-cover grayscale"
+                className="h-[300px] w-full object-cover grayscale"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                <h3 className="text-xl font-heading font-bold text-white mb-2">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                <h3 className="mb-2 font-heading text-xl font-bold text-white">
                   Project Diablo II
                 </h3>
                 <Button variant="secondary" disabled className="w-full">
@@ -74,10 +74,10 @@ export function Hero2() {
                 src="/images/poe2.avif"
                 width={400}
                 height={500}
-                className="w-full h-[300px] object-cover grayscale"
+                className="h-[300px] w-full object-cover grayscale"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                <h3 className="text-xl font-heading font-bold text-white mb-2">Path of Exile 2</h3>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                <h3 className="mb-2 font-heading text-xl font-bold text-white">Path of Exile 2</h3>
                 <Button variant="secondary" disabled className="w-full">
                   Coming Soon 🔒
                 </Button>
@@ -90,10 +90,10 @@ export function Hero2() {
                 src="/images/runescape.jpg"
                 width={400}
                 height={500}
-                className="w-full h-[300px] object-cover grayscale"
+                className="h-[300px] w-full object-cover grayscale"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                <h3 className="text-xl font-heading font-bold text-white mb-2">Runescape</h3>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+                <h3 className="mb-2 font-heading text-xl font-bold text-white">Runescape</h3>
                 <Button variant="secondary" disabled className="w-full">
                   Coming Soon 🔒
                 </Button>
@@ -105,20 +105,20 @@ export function Hero2() {
       <div className="container mt-14 max-w-5xl" />
       <section className="container flex flex-col items-center gap-6 py-24 sm:gap-7">
         <div className="flex flex-col gap-3">
-          <span className="font-bold uppercase text-primary text-center">Features</span>
-          <h2 className="font-heading font-semibold tracking-tight sm:text-4xl text-balance text-center text-[#FFFFFF] text-[16px]">
+          <span className="text-center font-bold uppercase text-primary">Features</span>
+          <h2 className="text-balance text-center font-heading text-[16px] font-semibold tracking-tight text-[#FFFFFF] sm:text-4xl">
             Why choose us?
           </h2>
         </div>
         <section className="w-full py-16">
-          <div className="container px-4 md:px-6 border-accent">
-            <Carousel className="w-full max-w-5xl mx-auto">
+          <div className="container border-accent px-4 md:px-6">
+            <Carousel className="mx-auto w-full max-w-5xl">
               <CarouselContent>
                 <CarouselItem className="md:basis-1/1">
                   <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center text-center p-6">
-                      <Clock className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-heading text-2xl font-bold mb-2">
+                    <CardContent className="flex flex-col items-center p-6 text-center">
+                      <Clock className="mb-4 size-12 text-primary" />
+                      <h3 className="mb-2 font-heading text-2xl font-bold">
                         20+ Years of Gaming Experience
                       </h3>
                       <p className="text-muted-foreground">
@@ -130,9 +130,9 @@ export function Hero2() {
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/1">
                   <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center text-center p-6">
-                      <Cpu className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-heading text-2xl font-bold mb-2">
+                    <CardContent className="flex flex-col items-center p-6 text-center">
+                      <Cpu className="mb-4 size-12 text-primary" />
+                      <h3 className="mb-2 font-heading text-2xl font-bold">
                         Modern Software & Solutions
                       </h3>
                       <p className="text-muted-foreground">
@@ -143,9 +143,9 @@ export function Hero2() {
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/1">
                   <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center text-center p-6">
-                      <Gamepad className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-heading text-2xl font-bold mb-2">
+                    <CardContent className="flex flex-col items-center p-6 text-center">
+                      <Gamepad className="mb-4 size-12 text-primary" />
+                      <h3 className="mb-2 font-heading text-2xl font-bold">
                         Built by Gamers, for Gamers
                       </h3>
                       <p className="text-muted-foreground">
@@ -156,9 +156,9 @@ export function Hero2() {
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/1">
                   <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center text-center p-6">
-                      <Users className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-heading text-2xl font-bold mb-2">
+                    <CardContent className="flex flex-col items-center p-6 text-center">
+                      <Users className="mb-4 size-12 text-primary" />
+                      <h3 className="mb-2 font-heading text-2xl font-bold">
                         Community-First Approach
                       </h3>
                       <p className="text-muted-foreground">
@@ -170,9 +170,9 @@ export function Hero2() {
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/1">
                   <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center text-center p-6">
-                      <MessageSquare className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-heading text-2xl font-bold mb-2">Active Discord</h3>
+                    <CardContent className="flex flex-col items-center p-6 text-center">
+                      <MessageSquare className="mb-4 size-12 text-primary" />
+                      <h3 className="mb-2 font-heading text-2xl font-bold">Active Discord</h3>
                       <p className="text-muted-foreground">
                         Join our growing Discord server to chat, get updates, and connect with other
                         gamers.
@@ -182,9 +182,9 @@ export function Hero2() {
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/1">
                   <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center text-center p-6">
-                      <Star className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="font-heading text-2xl font-bold mb-2">
+                    <CardContent className="flex flex-col items-center p-6 text-center">
+                      <Star className="mb-4 size-12 text-primary" />
+                      <h3 className="mb-2 font-heading text-2xl font-bold">
                         400+ Trustpilot Reviews
                       </h3>
                       <p className="text-muted-foreground">
@@ -195,7 +195,7 @@ export function Hero2() {
                   </Card>
                 </CarouselItem>
               </CarouselContent>
-              <div className="flex items-center justify-center w-full gap-2 pt-4">
+              <div className="flex w-full items-center justify-center gap-2 pt-4">
                 <CarouselPrevious className="static translate-y-0" />
                 <CarouselNext className="static translate-y-0" />
               </div>
@@ -203,17 +203,17 @@ export function Hero2() {
           </div>
         </section>
       </section>
-      <section className="py-24 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="md:text-4xl font-heading font-bold mb-4 text-[#FFFFFF] text-[16px]">
+      <section className="mx-auto max-w-7xl px-4 py-24 md:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 font-heading text-[16px] font-bold text-[#FFFFFF] md:text-4xl">
             How It Works
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-[#FFFFFF]">
+          <p className="mx-auto max-w-2xl text-lg text-[#FFFFFF]">
             Discover our simple three-step process to transform your experience
           </p>
         </div>
         <div className="space-y-24">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col items-center gap-12 md:flex-row">
             <div className="w-full md:w-1/2">
               <Image
                 alt="Step 1"
@@ -226,7 +226,7 @@ export function Hero2() {
             <div className="w-full md:w-1/2">
               <div className="space-y-4">
                 <Badge variant="secondary">Step 1</Badge>
-                <h3 className="text-2xl font-heading font-semibold text-[#FFFFFF]">
+                <h3 className="font-heading text-2xl font-semibold text-[#FFFFFF]">
                   Select a Title
                 </h3>
                 <p className="text-[#FFFFFF]">
@@ -236,7 +236,7 @@ export function Hero2() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="flex flex-col items-center gap-12 md:flex-row-reverse">
             <div className="w-full md:w-1/2">
               <Image
                 alt="Step 2"
@@ -249,7 +249,7 @@ export function Hero2() {
             <div className="w-full md:w-1/2">
               <div className="space-y-4">
                 <Badge variant="secondary">Step 2</Badge>
-                <h3 className="text-2xl font-heading font-semibold text-[#FFFFFF]">
+                <h3 className="font-heading text-2xl font-semibold text-[#FFFFFF]">
                   Customize Your Experience
                 </h3>
                 <p className="text-[#FFFFFF]">
@@ -260,7 +260,7 @@ export function Hero2() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col items-center gap-12 md:flex-row">
             <div className="w-full md:w-1/2">
               <Image
                 alt="Step 3"
@@ -273,7 +273,7 @@ export function Hero2() {
             <div className="w-full md:w-1/2">
               <div className="space-y-4">
                 <Badge variant="secondary">Step 3</Badge>
-                <h3 className="text-2xl font-heading font-semibold text-[#FFFFFF]">
+                <h3 className="font-heading text-2xl font-semibold text-[#FFFFFF]">
                   Shop with Ease
                 </h3>
                 <p className="text-[#FFFFFF]">
@@ -288,8 +288,8 @@ export function Hero2() {
       </section>
       <section className="container flex flex-col items-center gap-6 py-24 sm:gap-7">
         <div className="flex flex-col gap-3">
-          <span className="font-bold uppercase text-primary text-center">Faq</span>
-          <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl text-balance text-center text-[#FFFFFF]">
+          <span className="text-center font-bold uppercase text-primary">Faq</span>
+          <h2 className="text-balance text-center font-heading text-3xl font-semibold tracking-tight text-[#FFFFFF] sm:text-4xl">
             Frequently Asked Questions
           </h2>
           <Accordion type="single" collapsible className="w-full">
@@ -304,7 +304,7 @@ export function Hero2() {
                         </AccordionTrigger>
                         <AccordionContent className="text-muted-foreground">
                           <p>You&apos;ll get two emails:</p>
-                          <ul className="list-disc pl-6 mt-2">
+                          <ul className="mt-2 list-disc pl-6">
                             <li>A processing email</li>
                             <li>An item delivery form – please fill this out!</li>
                           </ul>
@@ -370,7 +370,7 @@ export function Hero2() {
                             Verification confirms your identity. You&apos;ll need to submit a photo
                             of your driver&apos;s license + payment method for:
                           </p>
-                          <ul className="list-disc pl-6 mt-2">
+                          <ul className="mt-2 list-disc pl-6">
                             <li>Orders over $500</li>
                             <li>Multiple orders totaling $500+ within 24 hrs</li>
                             <li>Use of multiple payment methods</li>
@@ -388,7 +388,7 @@ export function Hero2() {
                             Yes—with perks! You can checkout as a guest, but having an account gives
                             you:
                           </p>
-                          <ul className="list-disc pl-6 mt-2">
+                          <ul className="mt-2 list-disc pl-6">
                             <li>Order history</li>
                             <li>Sale & news updates</li>
                             <li>Access to Honor Tokens, our exclusive rewards program</li>
@@ -412,7 +412,7 @@ export function Hero2() {
                         </AccordionTrigger>
                         <AccordionContent className="text-muted-foreground">
                           <p>Try the following:</p>
-                          <ul className="list-disc pl-6 mt-2">
+                          <ul className="mt-2 list-disc pl-6">
                             <li>Clear your browser cache</li>
                             <li>Log into your account</li>
                             <li>
@@ -442,7 +442,7 @@ export function Hero2() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#FFFFFF]">
+              <h2 className="font-heading text-3xl font-bold tracking-tighter text-[#FFFFFF] sm:text-4xl md:text-5xl">
                 Never miss an Expansion
               </h2>
               <p className="mx-auto max-w-[700px] text-[#FFFFFF]">
@@ -461,7 +461,7 @@ export function Hero2() {
                 </div>
                 <Button className="w-full">
                   Subscribe
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 size-4" />
                 </Button>
               </form>
               <p className="text-xs text-muted-foreground">

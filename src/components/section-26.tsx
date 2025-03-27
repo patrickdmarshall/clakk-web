@@ -9,24 +9,24 @@ import { Input } from "@/components/ui/input";
 
 export function Section26() {
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8">
+    <div className="mx-auto max-w-6xl space-y-8 p-8">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-4xl font-heading font-bold">Welcome back, Chad!</h1>
-          <p className="text-muted-foreground mt-2">Your Clakk Experience Awaits</p>
+          <h1 className="font-heading text-4xl font-bold">Welcome back, Chad!</h1>
+          <p className="mt-2 text-muted-foreground">Your Clakk Experience Awaits</p>
         </div>
         <div className="flex items-center gap-4">
-          <div className="bg-secondary/20 px-4 py-2 rounded-lg">
+          <div className="rounded-lg bg-secondary/20 px-4 py-2">
             <p className="text-sm text-muted-foreground">Reward Points</p>
             <p className="font-bold">2,500 pts</p>
           </div>
           <Button size="sm" variant="outline">
-            <LogOut className="w-4 h-4 mr-2" />
+            <LogOut className="mr-2 size-4" />
             Logout
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
             <CardTitle>Select Your Games</CardTitle>
@@ -35,28 +35,28 @@ export function Section26() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
               <div className="flex-1">
                 <h3 className="font-semibold">Diablo II: Resurrected</h3>
                 <p className="text-sm text-muted-foreground">Classic ARPG remastered</p>
               </div>
               <Switch />
             </div>
-            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
               <div className="flex-1">
                 <h3 className="font-semibold">Project Diablo II</h3>
                 <p className="text-sm text-muted-foreground">Coming Soon</p>
               </div>
               <Switch />
             </div>
-            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
               <div className="flex-1">
                 <h3 className="font-semibold">Path of Exile 2</h3>
                 <p className="text-sm text-muted-foreground">Coming Soon</p>
               </div>
               <Switch />
             </div>
-            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
               <div className="flex-1">
                 <h3 className="font-semibold">Runescape</h3>
                 <p className="text-sm text-muted-foreground">Coming Soon</p>
@@ -76,19 +76,19 @@ export function Section26() {
                 <Label>Platform</Label>
                 <div className="grid grid-cols-2 gap-2">
                   <Button size="sm" variant="outline">
-                    <Monitor className="h-4 w-4 mr-2" />
+                    <Monitor className="mr-2 size-4" />
                     PC
                   </Button>
                   <Button size="sm" variant="outline">
-                    <Gamepad2 className="h-4 w-4 mr-2" />
+                    <Gamepad2 className="mr-2 size-4" />
                     Console
                   </Button>
                   <Button size="sm" variant="outline">
-                    <Gamepad className="h-4 w-4 mr-2" />
+                    <Gamepad className="mr-2 size-4" />
                     Switch
                   </Button>
                   <Button size="sm" variant="outline">
-                    <Gamepad className="h-4 w-4 mr-2" />
+                    <Gamepad className="mr-2 size-4" />
                     Xbox
                   </Button>
                 </div>
@@ -160,7 +160,7 @@ export function Section26() {
             <CardDescription>Manage your account preferences</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="flex items-center justify-between p-4 bg-secondary/20 rounded-lg">
+            <div className="flex items-center justify-between rounded-lg bg-secondary/20 p-4">
               <div>
                 <p className="font-medium">Email Address</p>
                 <p className="text-sm text-muted-foreground">user@example.com</p>
@@ -171,18 +171,18 @@ export function Section26() {
             </div>
             <Button variant="outline" className="w-full justify-between">
               Change Password
-              <Lock className="w-4 h-4" />
+              <Lock className="size-4" />
             </Button>
             <Button variant="outline" className="w-full justify-between">
               Order History
-              <Clock className="w-4 h-4" />
+              <Clock className="size-4" />
             </Button>
           </CardContent>
         </Card>
       </div>
       <div className="flex justify-end">
         <Button>
-          <Save className="w-4 h-4 mr-2" />
+          <Save className="mr-2 size-4" />
           Save Changes
         </Button>
       </div>

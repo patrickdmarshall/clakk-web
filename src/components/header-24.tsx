@@ -24,21 +24,21 @@ export function Header24() {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="container flex items-center justify-between gap-10 py-4 mt-0 md:mt-4"
+      className="container mt-0 flex items-center justify-between gap-10 py-4 md:mt-4"
     >
       <Logo2 className="text-[#FFFFFF]" />
       <div className="flex items-center gap-10">
-        <nav className="hidden items-center gap-10 md:flex justify-end">
-          <nav className="flex items-center justify-between px-6 py-4 w-full">
+        <nav className="hidden items-center justify-end gap-10 md:flex">
+          <nav className="flex w-full items-center justify-between px-6 py-4">
             <div className="flex items-center space-x-8" />
-            <nav className="w-full bg-background border-b border-blue-500/20">
+            <nav className="w-full border-b border-blue-500/20 bg-background">
               <div className="container mx-auto px-4">
-                <div className="h-16 flex items-center justify-center gap-8">
-                  <a href="/shop" className="text-foreground hover:text-primary transition-colors">
+                <div className="flex h-16 items-center justify-center gap-8">
+                  <a href="/shop" className="text-foreground transition-colors hover:text-primary">
                     Shop
                   </a>
                   <DropdownMenu>
-                    <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors">
+                    <DropdownMenuTrigger className="text-foreground transition-colors hover:text-primary">
                       Resources
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -51,15 +51,15 @@ export function Header24() {
                   </DropdownMenu>
                   <a
                     href="/guides"
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-foreground transition-colors hover:text-primary"
                   >
                     Guides
                   </a>
                   <Popover>
                     <PopoverTrigger>
                       <div className="relative">
-                        <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
-                        <Badge className="absolute -top-2 -right-2 h-4 w-4 flex items-center justify-center">
+                        <ShoppingCart className="size-5 text-foreground transition-colors hover:text-primary" />
+                        <Badge className="absolute -right-2 -top-2 flex size-4 items-center justify-center">
                           2
                         </Badge>
                       </div>
@@ -67,14 +67,14 @@ export function Header24() {
                     <PopoverContent className="w-64">
                       <div className="space-y-4">
                         <div className="flex items-center gap-2">
-                          <div className="h-12 w-12 rounded bg-muted" />
+                          <div className="size-12 rounded bg-muted" />
                           <div>
                             <p className="text-sm font-medium">Item 1</p>
                             <p className="text-sm text-muted-foreground">$29.99</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="h-12 w-12 rounded bg-muted" />
+                          <div className="size-12 rounded bg-muted" />
                           <div>
                             <p className="text-sm font-medium">Item 2</p>
                             <p className="text-sm text-muted-foreground">$19.99</p>
@@ -89,9 +89,9 @@ export function Header24() {
                   </Popover>
                   <a
                     href="/experience"
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-foreground transition-colors hover:text-primary"
                   >
-                    <User className="h-5 w-5" />
+                    <User className="size-5" />
                   </a>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export function Header24() {
         <div className="hidden items-center gap-2 md:flex" />
       </div>
       <MobileNavbar>
-        <div className="rounded-b-lg bg-background py-4 container text-foreground shadow-xl">
+        <div className="container rounded-b-lg bg-background py-4 text-foreground shadow-xl">
           <nav className="flex flex-col gap-1 pt-2">
             <MobileNavItem2 href="/about" label="About" />
             <MobileNavItem2 href="/docs" label="Docs" />

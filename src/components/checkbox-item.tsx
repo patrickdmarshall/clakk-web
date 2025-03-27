@@ -9,7 +9,7 @@ interface CheckboxItemProps {
 export function CheckboxItem({ label, className }: CheckboxItemProps) {
   return (
     <label className={cn("flex items-center space-x-2", className)}>
-      <Checkbox id="men" className="bg-input size-5 border-border" />
+      <Checkbox id="men" className="size-5 border-border bg-input" />
       <span>{label}</span>
     </label>
   );

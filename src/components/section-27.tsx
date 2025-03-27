@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 
 export function Section27() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background bg-opacity-95 p-4">
+    <div className="flex min-h-screen items-center justify-center bg-background bg-opacity-95 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-2 text-center">
           <CardTitle className="font-heading text-3xl">Welcome to Clakk</CardTitle>
@@ -18,7 +18,7 @@ export function Section27() {
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
-            <div className="flex justify-center space-x-2 mb-6">
+            <div className="mb-6 flex justify-center space-x-2">
               <Button variant="outline" className="w-24">
                 Login
               </Button>
@@ -36,7 +36,7 @@ export function Section27() {
                 <Input id="password" type="password" placeholder="Enter your password" />
               </div>
               <div className="flex items-center justify-between text-sm">
-                <Button variant="link" className="text-muted-foreground p-0 h-auto">
+                <Button variant="link" className="h-auto p-0 text-muted-foreground">
                   Forgot Password?
                 </Button>
               </div>

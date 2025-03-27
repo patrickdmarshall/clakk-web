@@ -30,25 +30,25 @@ export function ProductCard({
           style={{ objectFit: "cover", aspectRatio: "200/200" }}
           width="200"
           height="200"
-          className="w-full object-cover rounded-xl bg-primary/10 aspect-square p-14"
+          className="aspect-square w-full rounded-xl bg-primary/10 object-cover p-14"
         />
         <Button
           size="icon"
           variant="outline"
-          className="rounded-full absolute right-2 top-2 hover:bg-accent"
+          className="absolute right-2 top-2 rounded-full hover:bg-accent"
         >
           <Heart size={16} />
         </Button>
-        <Badge className="absolute top-2 left-2">New Arrival</Badge>
+        <Badge className="absolute left-2 top-2">New Arrival</Badge>
       </div>
-      <div className="w-full flex items-center justify-between">
+      <div className="flex w-full items-center justify-between">
         <h3 className="font-semibold">{name}</h3>
         <div className="font-bold">
           <span>$</span>
           <span>{price}</span>
         </div>
       </div>
-      <p className="text-muted-foreground text-xs">{description}</p>
+      <p className="text-xs text-muted-foreground">{description}</p>
     </Link>
   );
 }

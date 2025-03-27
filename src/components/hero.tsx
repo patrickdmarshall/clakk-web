@@ -5,22 +5,22 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="pb-28 pt-20 bg-gradient-to-b from-background via-70% via-secondary/20">
+    <section className="bg-gradient-to-b from-background via-secondary/20 via-70% pb-28 pt-20">
       <div className="container flex flex-col items-center gap-8 sm:gap-10">
         <motion.div
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 5, opacity: 0 }}
           transition={{ delay: 0.8, duration: 0.4 }}
-          className="flex cursor-pointer items-center gap-1 rounded-full px-4 font-medium py-1 bg-secondary/10 text-secondary hover:bg-secondary/20"
+          className="flex cursor-pointer items-center gap-1 rounded-full bg-secondary/10 px-4 py-1 font-medium text-secondary hover:bg-secondary/20"
         />
         <motion.h1
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 10, opacity: 0 }}
           transition={{ delay: 0, duration: 0.4 }}
-          className="text-center font-heading text-4xl sm:text-5xl tracking-tight lg:text-6xl text-balance font-bold"
+          className="text-balance text-center font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
         >
           Welcome to
-          <span className="text-primary bg-clip-text text-transparent bg-gradient-to-br to-primary from-secondary">
+          <span className="bg-gradient-to-br from-secondary to-primary bg-clip-text text-primary text-transparent">
             &nbsp;Clakk
           </span>
         </motion.h1>
@@ -48,7 +48,7 @@ export function Hero() {
           src="/images/d2r.png"
           width={1000}
           height={800}
-          className="rounded-2xl shadow-lg border"
+          className="rounded-2xl border shadow-lg"
         />
       </div>
     </section>

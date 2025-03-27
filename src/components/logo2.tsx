@@ -8,7 +8,7 @@ interface Logo2Props {
 export function Logo2({ className }: Logo2Props) {
   return (
     <Link href="/" className={cn("flex items-center gap-3", className)}>
-      <span className="font-heading text-xl text-2xl font-extrabold">CLAKK</span>
+      <span className="font-heading text-2xl text-xl font-extrabold">CLAKK</span>
     </Link>
   );
 }

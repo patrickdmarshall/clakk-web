@@ -13,14 +13,14 @@ export function Footer17() {
         <h3 className="font-semibold">Product</h3>
         <a
           href="/character-builder"
-          className="text-[#888888] text-sm hover:text-[#AAAAAA] transition-colors"
+          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
         >
           Character Builder
         </a>
-        <a href="/guides" className="text-[#888888] text-sm hover:text-[#AAAAAA] transition-colors">
+        <a href="/guides" className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]">
           Guides
         </a>
-        <a href="/guides" className="text-[#888888] text-sm hover:text-[#AAAAAA] transition-colors">
+        <a href="/guides" className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]">
           Shop
         </a>
       </div>
@@ -28,19 +28,19 @@ export function Footer17() {
         <h3 className="font-semibold">Resources</h3>
         <a
           href="/discord"
-          className="text-[#888888] text-sm hover:text-[#AAAAAA] transition-colors"
+          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
         >
           Discord
         </a>
         <a
           href="/discord"
-          className="text-[#888888] text-sm hover:text-[#AAAAAA] transition-colors"
+          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
         >
           Facebook
         </a>
         <a
           href="/discord"
-          className="text-[#888888] text-sm hover:text-[#AAAAAA] transition-colors"
+          className="text-sm text-[#888888] transition-colors hover:text-[#AAAAAA]"
         >
           Trustpilot
         </a>
