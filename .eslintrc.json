@@ -1,11 +1,6 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+  "extends": ["next/core-web-vitals"],
   "rules": {
-    "react/jsx-no-undef": "off" [
-      "warn",
-      {
-        "allowGlobals": true
-      }
-    ]
+    "react/jsx-no-undef": "off"
   }
 }
