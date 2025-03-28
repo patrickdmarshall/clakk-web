@@ -6,14 +6,6 @@ import { Separator } from "@/components/ui/separator"; // Separator UI component
 import { Button } from "@/components/ui/button"; // Button UI component
 import { MobileNavbar } from "@/components/mobile-navbar"; // Mobile Navbar component
 import { MobileNavItem2 } from "@/components/mobile-nav-item2"; // Mobile navigation item component
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu"; // Radix UI Dropdown Menu components
-import { ShoppingCart, User } from "lucide-react"; // Shopping cart and user icons from lucide-react
-import Link from "next/link"; // Link component from Next.js for navigation
 import { useCart } from "@/hooks/useCart"; // Custom hook to handle cart logic
 
 export function Header() {
@@ -35,20 +27,6 @@ export function Header() {
               Shop
             </a>
 
-            {/* Resources Dropdown Menu */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-foreground transition-colors hover:text-primary">
-                Resources
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <a href="/builder" className="w-full">
-                    Character Builder
-                  </a>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
             {/* Guides Link */}
             <a href="/guides" className="text-foreground transition-colors hover:text-primary">
               Guides
@@ -58,7 +36,9 @@ export function Header() {
             <Popover>
               <PopoverTrigger>
                 <div className="relative">
-                  <ShoppingCart className="size-5 text-foreground transition-colors hover:text-primary" />
+                  <div className="size-5 text-foreground transition-colors hover:text-primary">
+                    {/* Cart Icon Placeholder */}
+                  </div>
                   <Badge className="absolute -right-2 -top-2 flex size-4 items-center justify-center">
                     {cartItems.length}
                   </Badge>
@@ -90,11 +70,6 @@ export function Header() {
                 </div>
               </PopoverContent>
             </Popover>
-
-            {/* User Profile Link */}
-            <a href="/experience" className="text-foreground transition-colors hover:text-primary">
-              <User className="size-5" />
-            </a>
           </div>
         </nav>
       </div>
@@ -107,9 +82,9 @@ export function Header() {
             <MobileNavItem2 href="/blog" label="Blog" />
             <MobileNavItem2 href="/pricing" label="Pricing" />
             <Button size="lg" asChild className="mt-2 w-full">
-              <Link href="#" className="cursor-pointer">
+              <a href="#" className="cursor-pointer">
                 Get Started
-              </Link>
+              </a>
             </Button>
           </nav>
         </div>
