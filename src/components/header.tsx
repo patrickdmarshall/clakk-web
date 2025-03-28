@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
-import { Logo2 } from "./logo2";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { MobileNavbar } from "@/components/mobile-navbar";
-import { MobileNavItem2 } from "@/components/mobile-nav-item2";
+import { Logo2 } from "./logo2"; // Assuming this is your logo component
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"; // Popover components
+import { Badge } from "@/components/ui/badge"; // Badge component for cart items
+import { Separator } from "@/components/ui/separator"; // Separator component
+import { Button } from "@/components/ui/button"; // Button component
+import { MobileNavbar } from "@/components/mobile-navbar"; // Mobile Navbar component
+import { MobileNavItem2 } from "@/components/mobile-nav-item2"; // Mobile Nav Item component
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu"; // Correct imports for dropdown menu
-import { ShoppingCart, User } from "lucide-react"; // Ensure these icons are imported from lucide-react
-import Link from "next/link"; // Ensure Link is imported from next/link
-import { useCart } from "@/hooks/useCart"; // Ensure useCart is correctly imported
+} from "@radix-ui/react-dropdown-menu"; // Dropdown Menu components from Radix UI
+import { ShoppingCart, User } from "lucide-react"; // Icons from Lucide React
+import Link from "next/link"; // Link component from Next.js
+import { useCart } from "@/hooks/useCart"; // Custom hook to manage cart state
 
 export function Header() {
-  const { cartItems, total } = useCart();
+  const { cartItems, total } = useCart(); // Get cart items and total using the custom hook
 
   return (
     <motion.header
@@ -26,15 +26,16 @@ export function Header() {
       transition={{ duration: 1 }}
       className="container mt-0 flex items-center justify-between gap-10 py-4 md:mt-4"
     >
-      <Logo2 className="text-[#FFFFFF]" />
-
+      <Logo2 className="text-[#FFFFFF]" /> {/* Logo component */}
       <div className="flex items-center gap-10">
         <nav className="hidden items-center justify-end gap-10 md:flex">
           <div className="flex h-16 items-center justify-center gap-8">
+            {/* Shop Link */}
             <a href="/shop" className="text-foreground transition-colors hover:text-primary">
               Shop
             </a>
 
+            {/* Resources Dropdown Menu */}
             <DropdownMenu>
               <DropdownMenuTrigger className="text-foreground transition-colors hover:text-primary">
                 Resources
@@ -48,10 +49,12 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Guides Link */}
             <a href="/guides" className="text-foreground transition-colors hover:text-primary">
               Guides
             </a>
 
+            {/* Cart Popover */}
             <Popover>
               <PopoverTrigger>
                 <div className="relative">
@@ -88,13 +91,14 @@ export function Header() {
               </PopoverContent>
             </Popover>
 
+            {/* User Profile Link */}
             <a href="/experience" className="text-foreground transition-colors hover:text-primary">
               <User className="size-5" />
             </a>
           </div>
         </nav>
       </div>
-
+      {/* Mobile Navbar */}
       <MobileNavbar>
         <div className="container rounded-b-lg bg-background py-4 text-foreground shadow-xl">
           <nav className="flex flex-col gap-1 pt-2">
