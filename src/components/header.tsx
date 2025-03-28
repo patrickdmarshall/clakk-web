@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Logo2 } from "./logo2";
-import { DropdownMenu } from "./dropdown-menu";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -11,7 +10,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu";
+} from "@radix-ui/react-dropdown-menu";  // Correct import
 import { ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "@/hooks/useCart";
