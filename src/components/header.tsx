@@ -7,10 +7,11 @@ import { Button } from "@/components/ui/button";
 import { MobileNavbar } from "@/components/mobile-navbar";
 import { MobileNavItem2 } from "@/components/mobile-nav-item2";
 import {
+  DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu";  // Correct import
+} from "@radix-ui/react-dropdown-menu"; // Correct import for DropdownMenu components
 import { ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "@/hooks/useCart";
