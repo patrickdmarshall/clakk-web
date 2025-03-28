@@ -1,16 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "extends": ["next/core-web-vitals", "plugin:react/recommended", "plugin:react-hooks/recommended"],
   "rules": {
-    "@next/next/no-img-element": "off",
-    "jsx-a11y/alt-text": "off",
-    "tailwindcss/no-custom-classname": "off",
-    "tailwindcss/no-contradicting-classname": "off",
-    "tailwindcss/migration-from-tailwind-2": "off"
-  },
-  "settings": {
-    "tailwindcss": {
-      "callees": ["clsx", "cva", "cn"],
-      "config": "tailwind.config.ts"
-    }
+    "react/jsx-no-undef": [
+      "warn",
+      {
+        "allowGlobals": true
+      }
+    ]
   }
 }
