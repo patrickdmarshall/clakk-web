@@ -36,9 +36,8 @@ export function Header() {
             <Popover>
               <PopoverTrigger>
                 <div className="relative">
-                  <div className="size-5 text-foreground transition-colors hover:text-primary">
-                    {/* Cart Icon Placeholder */}
-                  </div>
+                  {/* Cart Icon Placeholder */}
+                  <div className="size-5 text-foreground transition-colors hover:text-primary" />
                   <Badge className="absolute -right-2 -top-2 flex size-4 items-center justify-center">
                     {cartItems.length}
                   </Badge>
