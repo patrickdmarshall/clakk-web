@@ -11,10 +11,10 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu"; // Correct import for DropdownMenu components
-import { ShoppingCart, User } from "lucide-react";
-import Link from "next/link";
-import { useCart } from "@/hooks/useCart";
+} from "@radix-ui/react-dropdown-menu"; // Correct imports for dropdown menu
+import { ShoppingCart, User } from "lucide-react"; // Ensure these icons are imported from lucide-react
+import Link from "next/link"; // Ensure Link is imported from next/link
+import { useCart } from "@/hooks/useCart"; // Ensure useCart is correctly imported
 
 export function Header() {
   const { cartItems, total } = useCart();
