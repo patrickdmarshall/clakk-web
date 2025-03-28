@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Logo2 } from "./logo2"; // Assuming this is your logo component
+import { Logo2 } from "./logo2"; // Your logo component
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"; // Popover components
 import { Badge } from "@/components/ui/badge"; // Badge component for cart items
 import { Separator } from "@/components/ui/separator"; // Separator component
