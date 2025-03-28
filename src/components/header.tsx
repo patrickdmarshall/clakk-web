@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
-import { Logo2 } from "./logo2"; // Your logo component
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"; // Popover components
-import { Badge } from "@/components/ui/badge"; // Badge component for cart items
-import { Separator } from "@/components/ui/separator"; // Separator component
-import { Button } from "@/components/ui/button"; // Button component
+import { Logo2 } from "./logo2"; // Logo component from your project
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"; // Popover UI components
+import { Badge } from "@/components/ui/badge"; // Badge component for cart
+import { Separator } from "@/components/ui/separator"; // Separator UI component
+import { Button } from "@/components/ui/button"; // Button UI component
 import { MobileNavbar } from "@/components/mobile-navbar"; // Mobile Navbar component
-import { MobileNavItem2 } from "@/components/mobile-nav-item2"; // Mobile Nav Item component
+import { MobileNavItem2 } from "@/components/mobile-nav-item2"; // Mobile navigation item component
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu"; // Dropdown Menu components from Radix UI
-import { ShoppingCart, User } from "lucide-react"; // Icons from Lucide React
-import Link from "next/link"; // Link component from Next.js
-import { useCart } from "@/hooks/useCart"; // Custom hook to manage cart state
+} from "@radix-ui/react-dropdown-menu"; // Radix UI Dropdown Menu components
+import { ShoppingCart, User } from "lucide-react"; // Shopping cart and user icons from lucide-react
+import Link from "next/link"; // Link component from Next.js for navigation
+import { useCart } from "@/hooks/useCart"; // Custom hook to handle cart logic
 
 export function Header() {
-  const { cartItems, total } = useCart(); // Get cart items and total using the custom hook
+  const { cartItems, total } = useCart(); // Fetch cart items and total
 
   return (
     <motion.header
@@ -26,7 +26,7 @@ export function Header() {
       transition={{ duration: 1 }}
       className="container mt-0 flex items-center justify-between gap-10 py-4 md:mt-4"
     >
-      <Logo2 className="text-[#FFFFFF]" /> {/* Logo component */}
+      <Logo2 className="text-[#FFFFFF]" /> {/* Logo */}
       <div className="flex items-center gap-10">
         <nav className="hidden items-center justify-end gap-10 md:flex">
           <div className="flex h-16 items-center justify-center gap-8">
