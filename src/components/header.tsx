@@ -19,11 +19,10 @@ import { MobileNavbar } from "@/components/mobile-navbar";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
-  header: string;
-  className?: string;
+  className?: string; // Removed 'header' because it's not being used
 }
 
-export function Header({ header, className }: HeaderProps) {
+export function Header({ className }: HeaderProps) {
   return (
     <motion.header
       animate={{ opacity: 1 }}
