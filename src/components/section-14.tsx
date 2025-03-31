@@ -7,122 +7,123 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 export function Section14() {
   return (
     <div className="min-h-screen bg-background p-8">
-      <div className="mx-auto max-w-5xl">
-        <div className="container mx-auto block px-4 py-16 text-center">
-          <h2 className="mb-8 font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Trapsin Guide
+      <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 py-16 text-center block">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-8">
+            Hork Guide
           </h2>
-          <Image alt="Image" src="/images/sin.jpg" width={500} height={500} />
-          <div className="mx-auto max-w-4xl" />
-          <div className="flex flex-row items-start justify-center gap-4 p-[20px]">
+          <Image alt="Image" src="/images/barb.jpg" width={500} height={500} />
+          <div className="max-w-4xl mx-auto" />
+          <div className="flex justify-center gap-4 flex-row items-start p-[20px]">
             <Button className="bg-[#3A6A3A] hover:bg-[#2A5A2A]">Add Build to Cart</Button>
             <Button variant="outline" className="flex items-center gap-2">
-              <Settings className="size-4" />
+              <Settings className="w-4 h-4" />
               Customize Build
             </Button>
           </div>
           <Tabs defaultValue="gear" className="w-full">
-            <TabsList className="grid h-14 w-full grid-cols-7 gap-4 bg-card/50 p-1">
+            <TabsList className="h-14 w-full bg-card/50 grid grid-cols-7 gap-4 p-1">
               <TabsTrigger
                 value="gear"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Sword className="size-4" />
+                <Sword className="h-4 w-4" />
                 <span>Gear</span>
               </TabsTrigger>
               <TabsTrigger
                 value="mercenary"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Shield className="size-4" />
+                <Shield className="h-4 w-4" />
                 <span>Mercenary</span>
               </TabsTrigger>
               <TabsTrigger
                 value="inventory"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Backpack className="size-4" />
+                <Backpack className="h-4 w-4" />
                 <span>Inventory</span>
               </TabsTrigger>
               <TabsTrigger
                 value="skills"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Sparkles className="size-4" />
+                <Sparkles className="h-4 w-4" />
                 <span>Skills</span>
               </TabsTrigger>
               <TabsTrigger
                 value="attributes"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Star className="size-4" />
+                <Star className="h-4 w-4" />
                 <span>Attributes</span>
               </TabsTrigger>
               <TabsTrigger
                 value="breakpoints"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Gauge className="size-4" />
+                <Gauge className="h-4 w-4" />
                 <span>Breakpoints</span>
               </TabsTrigger>
               <TabsTrigger
                 value="playstyle"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Gamepad2 className="size-4" />
+                <Gamepad2 className="h-4 w-4" />
                 <span>Playstyle</span>
               </TabsTrigger>
             </TabsList>
-            <div className="mt-4 rounded-lg border border-border/50 bg-card/50 p-6">
+            <div className="mt-4 p-6 rounded-lg bg-card/50 border border-border/50">
               <TabsContent value="gear">
                 <div className="space-y-4">
-                  <h2 className="font-heading text-2xl text-primary">Gear</h2>
+                  <h2 className="text-2xl font-heading text-primary">Gear</h2>
                   <div className="space-y-2">
                     <p className="border-primary-foreground">
-                      Main Weapon: Heart of the Oak (Hoto){" "}
+                      Weapons: Grief (Phase Blade) + Beast (Berserker Axe)
                     </p>
                     <p className="text-muted-foreground">
-                      Alternate Switch: Infinity– Breaks Lightning Immunities
+                      Alternative: Dual Oath, Last Wish + Grief, or Heart of the Oak (For Extra FCR
+                      on War Cry Build)&lt;br&gt;&lt;br&gt;
                     </p>
-                    <p>Shield: Spirit Monarch</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Lidless Wall – +1 Skills, Mana, FCR
-                    </p>
+                    <p>Shield: None</p>
+                    <p className="text-muted-foreground">Alternative: None</p>
                   </div>
                   <div className="space-y-2">
-                    <p>Helmet: Griffon&apos;s Eye</p>
-                    <p className="text-muted-foreground">Helmet: Shako</p>
+                    <p>Helmet: Crown of Thieves</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Arreat’s Face (Skills &amp; Resistances)
+                    </p>
                     <p>Armor: Enigma</p>
                     <p className="text-muted-foreground">
-                      Alternative: Chains of Honor – Resists &amp; +2 Skills
+                      Alternative: Wealth Runeword (For Extra Gold Find)&lt;br&gt;
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <p>Gloves: Trang-Oul&apos;s</p>
+                    <p>Gloves: Chance Guards</p>
                     <p className="text-muted-foreground">
-                      Alternative: Magefist (FCR &amp; Mana) or Rare +2 Assassin Gloves
+                      Alternative: Dracul’s Grasp (For Life Tap)
                     </p>
-                    <p>Belt: Arachnid Mesh Belt</p>
+                    <p>Belt: Goldwrap</p>
                     <p className="text-muted-foreground">
-                      Alternative: Verdungo&apos;s (Vitality, Damage Reduction)
-                    </p>
-                  </div>
-                  <div className="space-y-2">
-                    <p>Boots: War Travelers</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Sandstorm Trek (FHR, Strength, Vitality)
-                    </p>
-                    <p>Rings: Stone of Jordan + Ravenfrost</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Rare/Crafted Ring with FCR, Life, Resistances&nbsp;
+                      Alternative: Verdungo’s Hearty Cord (For Survivability)
                     </p>
                   </div>
                   <div className="space-y-2">
-                    <p>Amulet: Mara&apos;s Kaleidoscope</p>
+                    <p>Boots: War Traveler</p>
                     <p className="text-muted-foreground">
-                      Alternative: +2 Assassin Skills Amulet with FCR
+                      Alternative: Infernostride (More Gold Find)
                     </p>
-                    <p>&lt;b&gt;Secondary Weapon (Swap): Call to Arms (CTA)&lt;/b&gt;</p>
+                    <p>Rings: 2x Dwarfstar</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Swap for 1x Ravenfrost (Not suggested)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <p>Amulet: Highlord&apos;s Wrath</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Metalgrid (For Extra Resistances)
+                    </p>
+                    <p>&lt;b&gt;Secondary Weapon (Swap): Call to Arms (CTA) + Hoto&lt;/b&gt;</p>
                     <p className="text-muted-foreground">
                       +Battle Orders, +Battle Command, +Life Boost
                     </p>
@@ -130,76 +131,62 @@ export function Section14() {
                 </div>
               </TabsContent>
               <TabsContent value="mercenary">
-                <h2 className="font-heading text-2xl text-primary">Mercenary</h2>
+                <h2 className="text-2xl font-heading text-primary">Mercenary</h2>
                 <div className="mt-4 space-y-2">
-                  <p className="text-foreground">
-                    Type: Act 2 Nightmare Defensive (Holy Freeze)&lt;br&gt;
-                  </p>
-                  <p className="text-foreground">
-                    &lt;b&gt;Helmet: Andariel&apos;s Visage&lt;/b&gt;
-                  </p>
-                  <p className="text-muted-foreground">Alternative: Guillaume’s Face </p>
+                  <p className="text-foreground">Coming Soon</p>
                 </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-foreground">Weapon: Ethereal Infinity</p>
-                  <p className="text-muted-foreground">Alternative: None&nbsp;</p>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-foreground">Armor: Fortitude</p>
-                  <p className="text-muted-foreground">Alternative: Treachery</p>
-                </div>
+                <div className="mt-4 space-y-2" />
+                <div className="mt-4 space-y-2" />
               </TabsContent>
               <TabsContent value="inventory">
-                <h2 className="font-heading text-2xl text-primary">Inventory</h2>
+                <h2 className="text-2xl font-heading text-primary">Inventory</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-primary-foreground">&lt;b&gt;Grand Charms&lt;/b&gt;</p>
-                  <p className="text-muted-foreground">Trap Skiller +1 (7-8)</p>
+                  <p className="text-muted-foreground">War Cry Skillers</p>
                 </div>
                 <div className="mt-4 space-y-2">
                   <p className="text-primary-foreground">&lt;b&gt;Unique Charms&lt;/b&gt;</p>
                   <p className="text-muted-foreground">
-                    Hellfire Torch (Assassin), Annihilus, Light Sunder*
+                    Hellfire Torch (Barbarian), Annihilus, Gheed’s Fortune
                   </p>
                 </div>
                 <div className="mt-4 space-y-2">
                   <p className="text-primary-foreground">&lt;b&gt;Small Charms&lt;/b&gt;</p>
-                  <p className="text-muted-foreground">Life, Resistances, Magic Find</p>
+                  <p className="text-muted-foreground">Gold Find, Magic Find, Resistances</p>
                 </div>
               </TabsContent>
               <TabsContent value="skills">
-                <h2 className="font-heading text-2xl text-primary">Skill Distribution</h2>
+                <h2 className="text-2xl font-heading text-primary">Skill Distribution</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-foreground">
                     &lt;b&gt;Primary Skills (Max These First in Order):&lt;/b&gt;
                   </p>
-                  <p className="text-foreground">Lightning Sentry - Max</p>
-                  <p className="text-foreground">Death Sentry - Max</p>
-                  <p className="text-foreground">Charged Bolt Sentry - Max</p>
-                  <p className="text-foreground">Fire Blast - Max</p>
+                  <p className="text-foreground">Find Item - Max</p>
+                  <p className="text-foreground">Battle Orders - Max</p>
+                  <p className="text-foreground">Shout - Max</p>
+                  <p className="text-foreground">
+                    Sword/Axe/Mace Mastery – Max (Choose Based on Weapon Type)
+                  </p>
+                  <p className="text-foreground">
+                    5. Whirlwind or Berserk – Max (Main Damage Option)
+                  </p>
                   <p className="text-foreground" />
                   <p className="text-foreground">&lt;div&gt;&lt;br&gt;&lt;/div&gt;</p>
                   <p className="text-foreground">
                     &lt;b&gt;Support Skills (Put 1 Point Each):&lt;/b&gt;
                   </p>
-                  <p className="text-foreground">Shadow Master - 1 Point</p>
-                  <p className="text-foreground">Mind Blast - 1 Point</p>
-                  <p className="text-foreground">Fade - 1 Point</p>
-                  <p className="text-foreground">Cloak of Shadows - 1 Point</p>
-                  <p className="text-foreground">Mind Blast - 1 Point</p>
-                  <p className="text-foreground">Weapon Block - 1 Point</p>
+                  <p className="text-foreground">Battle Command - 1 Point</p>
+                  <p className="text-foreground">Increased Speed - 1 Point</p>
+                  <p className="text-foreground">Iron Skin &amp; Natural Resistance - 1 Point</p>
                   <p className="text-foreground">&lt;br&gt;</p>
                 </div>
               </TabsContent>
               <TabsContent value="attributes">
-                <h2 className="font-heading text-2xl text-primary">Attribute Points</h2>
+                <h2 className="text-2xl font-heading text-primary">Attribute Points</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-primary-foreground" />
-                  <p className="text-muted-foreground">
-                    Strength: Enough for gear (~156 for Monarch)
-                  </p>
-                  <p className="text-muted-foreground">
-                    Dexterity: Enough for max block if desired (~100-130) or minimal&lt;br&gt;
-                  </p>
+                  <p className="text-muted-foreground">Strength: Enough for gear</p>
+                  <p className="text-muted-foreground">Dexterity: Enough for gear</p>
                   <p className="text-muted-foreground">
                     Vitality: Dump the rest here (Main Focus)&lt;br&gt;
                   </p>
@@ -207,50 +194,45 @@ export function Section14() {
                 </div>
               </TabsContent>
               <TabsContent value="breakpoints">
-                <h2 className="font-heading text-2xl text-primary">Breakpoints</h2>
+                <h2 className="text-2xl font-heading text-primary">Breakpoints</h2>
                 <div className="mt-4 space-y-2">
                   <p className="border-foreground text-foreground">
-                    Faster Cast Rate (FCR) (For Mind Blast &amp; Throwing Traps)
+                    &lt;b&gt;Faster Caster Rate (FCR):&lt;/b&gt;
                   </p>
-                  <p className="border-foreground text-muted-foreground">48% FCR (Basic)</p>
-                  <p className="border-foreground text-muted-foreground">65% FCR (Recommended)</p>
+                  <p className="text-muted-foreground border-foreground">37% (Basic)</p>
+                  <p className="text-muted-foreground border-foreground">63% (Optimal)</p>
                   <p className="border-foreground text-foreground">
                     &lt;b&gt;Faster Hit Recovery (FHR):&lt;/b&gt;
                   </p>
-                  <p className="border-foreground text-muted-foreground">42% (Basc)</p>
-                  <p className="border-foreground text-muted-foreground">86% (Optimal)</p>
-                  <p className="border-foreground text-foreground">
-                    Increased Attack Speed (IAS) (With Burst of Speed)
-                  </p>
-                  <p className="border-foreground text-muted-foreground">75% IAS (Recommended)</p>
+                  <p className="text-muted-foreground border-foreground">48% FCR (Basic)</p>
+                  <p className="text-muted-foreground border-foreground">86% (Optimal)</p>
                 </div>
               </TabsContent>
               <TabsContent value="playstyle">
-                <h2 className="font-heading text-2xl text-primary">Playstyle</h2>
+                <h2 className="text-2xl font-heading text-primary">Playstyle</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="text-foreground">
+                    Teleport to Travincal or Eldritch quickly – Engage enemy packs fast
+                  </p>
+                  <p className="text-foreground">
+                    Kill enemies efficiently (Whirlwind or Berserk preferred)
+                  </p>
+                  <p className="text-foreground">
+                    Use Find Item on corpses – Double your loot and gold drops
+                  </p>
+                  <p className="text-foreground">Use War Cry to stun enemies before horking</p>
+                </div>
                 <div className="mt-4 space-y-2">
                   <p className="text-foreground">
                     {" "}
-                    Cast 5 Lightning Sentries at enemy packs – Main damage
-                  </p>
-                  <p className="text-foreground">
-                    Follow up with Death Sentries for corpse explosions{" "}
-                  </p>
-                  <p className="text-foreground">Cast Mind Blast to crowd control tough enemies</p>
-                  <p className="text-foreground">
-                    Use Cloak of Shadows to disable ranged attackers{" "}
+                    Ideal for Gold Find &amp; Gambling in Hell Difficulty&lt;br&gt;
                   </p>
                 </div>
                 <div className="mt-4 space-y-2">
-                  <p className="text-foreground">Teleport to reposition or escape danger ⚡</p>
-                  <p className="text-foreground">Keep Shadow Master up for additional support </p>
-                  <p className="text-foreground"> Keep Burst of Speed up for mobility</p>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-foreground">&lt;br&gt;</p>
-                  <p className="font-bold text-foreground">Pro Tip:</p>
+                  <p className="text-foreground font-bold">Pro Tip:</p>
                   <p className="text-foreground">
-                    Place your traps strategically to maximize Lightning Sentry coverage, then add
-                    Death Sentries once enemies start dying for devastating chain explosions!
+                    Horking works best on Council Members in Travincal—they drop tons of gold and
+                    items!&lt;br&gt;
                   </p>
                 </div>
               </TabsContent>
@@ -259,7 +241,7 @@ export function Section14() {
         </div>
         <Tabs defaultValue="gear" className="mb-8 w-full">
           <TabsContent value="gear">
-            <div className="block gap-8" />
+            <div className="gap-8 block" />
           </TabsContent>
         </Tabs>
       </div>

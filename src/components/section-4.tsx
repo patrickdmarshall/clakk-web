@@ -7,76 +7,76 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 export function Section4() {
   return (
     <div className="min-h-screen bg-background p-8">
-      <div className="mx-auto max-w-5xl">
-        <div className="container mx-auto block px-4 py-16 text-center">
-          <h2 className="mb-8 font-heading text-3xl font-bold text-foreground md:text-4xl">
+      <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 py-16 text-center block">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-8">
             Smiter Paladin Guide
           </h2>
           <Image alt="Image" src="/images/pally.jpg" width={500} height={500} />
-          <div className="mx-auto max-w-4xl" />
-          <div className="flex flex-row items-start justify-center gap-4 p-[20px]">
+          <div className="max-w-4xl mx-auto" />
+          <div className="flex justify-center gap-4 flex-row items-start p-[20px]">
             <Button className="bg-[#3A6A3A] hover:bg-[#2A5A2A]">Add Build to Cart</Button>
             <Button variant="outline" className="flex items-center gap-2">
-              <Settings className="size-4" />
+              <Settings className="w-4 h-4" />
               Customize Build
             </Button>
           </div>
           <Tabs defaultValue="gear" className="w-full">
-            <TabsList className="grid h-14 w-full grid-cols-7 gap-4 bg-card/50 p-1">
+            <TabsList className="h-14 w-full bg-card/50 grid grid-cols-7 gap-4 p-1">
               <TabsTrigger
                 value="gear"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Sword className="size-4" />
+                <Sword className="h-4 w-4" />
                 <span>Gear</span>
               </TabsTrigger>
               <TabsTrigger
                 value="mercenary"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Shield className="size-4" />
+                <Shield className="h-4 w-4" />
                 <span>Mercenary</span>
               </TabsTrigger>
               <TabsTrigger
                 value="inventory"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Backpack className="size-4" />
+                <Backpack className="h-4 w-4" />
                 <span>Inventory</span>
               </TabsTrigger>
               <TabsTrigger
                 value="skills"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Sparkles className="size-4" />
+                <Sparkles className="h-4 w-4" />
                 <span>Skills</span>
               </TabsTrigger>
               <TabsTrigger
                 value="attributes"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Star className="size-4" />
+                <Star className="h-4 w-4" />
                 <span>Attributes</span>
               </TabsTrigger>
               <TabsTrigger
                 value="breakpoints"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Gauge className="size-4" />
+                <Gauge className="h-4 w-4" />
                 <span>Breakpoints</span>
               </TabsTrigger>
               <TabsTrigger
                 value="playstyle"
                 className="flex items-center gap-2 data-[state=active]:bg-primary/20"
               >
-                <Gamepad2 className="size-4" />
+                <Gamepad2 className="h-4 w-4" />
                 <span>Playstyle</span>
               </TabsTrigger>
             </TabsList>
-            <div className="mt-4 rounded-lg border border-border/50 bg-card/50 p-6">
+            <div className="mt-4 p-6 rounded-lg bg-card/50 border border-border/50">
               <TabsContent value="gear">
                 <div className="space-y-4">
-                  <h2 className="font-heading text-2xl text-primary">Gear</h2>
+                  <h2 className="text-2xl font-heading text-primary">Gear</h2>
                   <div className="space-y-2">
                     <p className="border-primary-foreground">Weapon: Grief Phase Blade</p>
                     <p className="text-muted-foreground">
@@ -126,7 +126,7 @@ export function Section4() {
                 </div>
               </TabsContent>
               <TabsContent value="mercenary">
-                <h2 className="font-heading text-2xl text-primary">Mercenary</h2>
+                <h2 className="text-2xl font-heading text-primary">Mercenary</h2>
                 <div className="mt-4 space-y-2">
                   <h3 className="font-semibold">Type: Act 2 Defensive (Holy Freeze)</h3>
                   <p className="text-foreground">Helmet: Andariel&apos;s Visage</p>
@@ -144,7 +144,7 @@ export function Section4() {
                 </div>
               </TabsContent>
               <TabsContent value="inventory">
-                <h2 className="font-heading text-2xl text-primary">Inventory</h2>
+                <h2 className="text-2xl font-heading text-primary">Inventory</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-primary-foreground">&lt;b&gt;Grand Charms&lt;/b&gt;</p>
                   <p className="text-muted-foreground">Paladin Combat Skillers</p>
@@ -159,7 +159,7 @@ export function Section4() {
                 </div>
               </TabsContent>
               <TabsContent value="skills">
-                <h2 className="font-heading text-2xl text-primary">Skill Distribution</h2>
+                <h2 className="text-2xl font-heading text-primary">Skill Distribution</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-foreground">
                     &lt;b&gt;Primary Skills (Max These First in Order):&lt;/b&gt;
@@ -183,7 +183,7 @@ export function Section4() {
                 </div>
               </TabsContent>
               <TabsContent value="attributes">
-                <h2 className="font-heading text-2xl text-primary">Attribute Points</h2>
+                <h2 className="text-2xl font-heading text-primary">Attribute Points</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-primary-foreground">
                     This build focuses on survivability, max block, and high vitality.
@@ -199,12 +199,12 @@ export function Section4() {
                 </div>
               </TabsContent>
               <TabsContent value="breakpoints">
-                <h2 className="font-heading text-2xl text-primary">Breakpoints</h2>
+                <h2 className="text-2xl font-heading text-primary">Breakpoints</h2>
                 <div className="mt-4 space-y-2">
                   <p className="border-foreground text-foreground">
                     &lt;b&gt;Increased Attack Speed (IAS):&lt;/b&gt;
                   </p>
-                  <p className="border-foreground text-muted-foreground">
+                  <p className="text-muted-foreground border-foreground">
                     50% IAS (Optimal – 6 Frame Smite)
                   </p>
                 </div>
@@ -212,14 +212,14 @@ export function Section4() {
                   <p className="border-foreground text-foreground">
                     &lt;b&gt;Faster Hit Recovery (FHR):&lt;/b&gt;
                   </p>
-                  <p className="border-foreground text-muted-foreground">
+                  <p className="text-muted-foreground border-foreground">
                     0 | 7 | 15 | 27 |&nbsp;48&nbsp;|&nbsp;86&nbsp;| 200 (48% is a solid breakpoint
                     for survivability)
                   </p>
                 </div>
               </TabsContent>
               <TabsContent value="playstyle">
-                <h2 className="font-heading text-2xl text-primary">Playstyle</h2>
+                <h2 className="text-2xl font-heading text-primary">Playstyle</h2>
                 <div className="mt-4 space-y-2">
                   <p className="text-foreground">
                     💡 Pro Tip: Stack resistances for Uber Tristram! Use Salvation Aura if needed.

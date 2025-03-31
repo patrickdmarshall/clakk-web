@@ -13,40 +13,40 @@ import { Badge } from "@/components/ui/badge";
 
 export function Hero3() {
   return (
-    <section className="bg-gradient-to-b from-background via-secondary/20 via-70% pb-28 pt-20">
+    <section className="pb-28 pt-20 bg-gradient-to-b from-background via-70% via-secondary/20">
       <div className="container flex flex-col items-center gap-8 sm:gap-10">
         <motion.h1
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 10, opacity: 0 }}
           transition={{ delay: 0, duration: 0.4 }}
-          className="text-balance text-center font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          className="text-center font-heading text-4xl sm:text-5xl tracking-tight lg:text-6xl text-balance font-bold"
         >
-          <span className="bg-gradient-to-br from-secondary to-primary bg-clip-text text-primary text-transparent">
+          <span className="text-primary bg-clip-text text-transparent bg-gradient-to-br to-primary from-secondary">
             Character Builder
           </span>
         </motion.h1>
         <div className="w-full max-w-sm text-[#FFFFFF]" />
       </div>
       <div className="min-h-screen p-6">
-        <div className="mx-auto max-w-7xl space-y-8">
+        <div className="max-w-7xl mx-auto space-y-8">
           <div className="space-y-4">
             <p className="text-center">
               Craft your perfect build using our advanced character customization tools
             </p>
           </div>
           <div className="container mx-auto">
-            <div className="flex flex-col items-center gap-6">
+            <div className="gap-6 flex items-center flex-col">
               <Image
                 alt="Character Build"
                 src="/images/d2.png"
                 width={500}
                 height={300}
-                className="size-auto"
+                className="w-auto h-auto"
               />
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-6 rounded-lg p-6">
+        <div className="flex flex-col gap-6 p-6 rounded-lg items-center">
           <div className="space-y-4">
             <div className="w-full">
               <Label htmlFor="class">Class</Label>
@@ -69,7 +69,7 @@ export function Hero3() {
                 <CardTitle>Character Equipment</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   <div className="space-y-2">
                     <Label>Main Weapon</Label>
                     <Input placeholder="Select weapon..." />
@@ -126,7 +126,7 @@ export function Hero3() {
                 <CardTitle>Character Inventory</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="space-y-2">
                     <Label>Grand Charms</Label>
                     <Input placeholder="Add grand charms..." />
@@ -145,11 +145,11 @@ export function Hero3() {
           </div>
           <div className="flex items-center justify-center gap-4 p-4">
             <Button size="lg" variant="outline" className="flex items-center gap-2">
-              <Trash2 className="size-5" />
+              <Trash2 className="h-5 w-5" />
               Clear Build
             </Button>
             <Button size="lg" className="flex items-center gap-2">
-              <ShoppingCart className="size-5" />
+              <ShoppingCart className="h-5 w-5" />
               Add to Cart
               <Badge variant="secondary" className="ml-2">
                 $99.99

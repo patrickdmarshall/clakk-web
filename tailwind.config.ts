@@ -1,20 +1,22 @@
 import type { Config } from "tailwindcss";
+
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-const config: Config = {
-  darkMode: "class", // Enables dark mode based on class
+const config = {
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}", // Pages
-    "./components/**/*.{ts,tsx}", // Components
-    "./app/**/*.{ts,tsx}", // App folder (if you're using Next.js with app dir)
-    "./src/**/*.{ts,tsx}", // Source folder (if you're organizing code this way)
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1200px", // Breakpoint for large screens
+        "2xl": "1200px",
       },
     },
     extend: {
@@ -97,6 +99,6 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config;
 
 export default config;

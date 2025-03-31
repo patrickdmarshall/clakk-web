@@ -1,190 +1,268 @@
-import { LogOut, Monitor, Gamepad2, Gamepad, Lock, Clock, Save } from "lucide-react";
+import Image from "next/image";
+import { Settings, Sword, Shield, Backpack, Sparkles, Star, Gauge, Gamepad2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Input } from "@/components/ui/input";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export function Section26() {
   return (
-    <div className="mx-auto max-w-6xl space-y-8 p-8">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="font-heading text-4xl font-bold">Welcome back, Chad!</h1>
-          <p className="mt-2 text-muted-foreground">Your Clakk Experience Awaits</p>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="rounded-lg bg-secondary/20 px-4 py-2">
-            <p className="text-sm text-muted-foreground">Reward Points</p>
-            <p className="font-bold">2,500 pts</p>
+    <div className="min-h-screen bg-background p-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 py-16 text-center block">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-8">
+            Summon Druid
+          </h2>
+          <Image alt="Image" src="/images/dru.jpg" width={500} height={500} />
+          <div className="max-w-4xl mx-auto" />
+          <div className="flex justify-center gap-4 flex-row items-start p-[20px]">
+            <Button className="bg-[#3A6A3A] hover:bg-[#2A5A2A]">Add Build to Cart</Button>
+            <Button variant="outline" className="flex items-center gap-2">
+              <Settings className="w-4 h-4" />
+              Customize Build
+            </Button>
           </div>
-          <Button size="sm" variant="outline">
-            <LogOut className="mr-2 size-4" />
-            Logout
-          </Button>
+          <Tabs defaultValue="gear" className="w-full">
+            <TabsList className="h-14 w-full bg-card/50 grid grid-cols-7 gap-4 p-1">
+              <TabsTrigger
+                value="gear"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Sword className="h-4 w-4" />
+                <span>Gear</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="mercenary"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Shield className="h-4 w-4" />
+                <span>Mercenary</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="inventory"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Backpack className="h-4 w-4" />
+                <span>Inventory</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="skills"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Sparkles className="h-4 w-4" />
+                <span>Skills</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="attributes"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Star className="h-4 w-4" />
+                <span>Attributes</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="breakpoints"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Gauge className="h-4 w-4" />
+                <span>Breakpoints</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="playstyle"
+                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
+              >
+                <Gamepad2 className="h-4 w-4" />
+                <span>Playstyle</span>
+              </TabsTrigger>
+            </TabsList>
+            <div className="mt-4 p-6 rounded-lg bg-card/50 border border-border/50">
+              <TabsContent value="gear">
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-heading text-primary">Gear</h2>
+                  <div className="space-y-2">
+                    <p className="border-primary-foreground">
+                      Weapon: Beast (Rune Word in a Scepter or Axe)
+                    </p>
+                    <p className="text-muted-foreground">
+                      Alternative: Hoto (If Teleporting More), Earthshaker (For Extra Summon
+                      Skills)&lt;br&gt;
+                    </p>
+                    <p>Shield: Spirit Monarch</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Phoenix (For Redemption Aura &amp; Firestorm Damage)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <p>Helmet: Jalal&apos;s Mane</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Ravenlore (For Fire Resist &amp; Skills)
+                    </p>
+                    <p>Armor: Enigma</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Chains of Honor (For More Resistances)&lt;br&gt;
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <p>Gloves: Trang-Oul&apos;s</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Magefist (More Mana &amp; FCR)
+                    </p>
+                    <p>Belt: Arachnid Mesh</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Verdungo’s (For Life &amp; DR)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <p>Boots: Aldur&apos;s Advance</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Sandstorm Trek (For Poison Resist &amp; Strength)
+                    </p>
+                    <p>Rings: Ravenfrost + Bul-Kathos&apos;</p>
+                    <p className="text-muted-foreground">Alternative: 1x SOJ + Ravenfrost</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p>Amulet: Mara’s Kaleidoscope</p>
+                    <p className="text-muted-foreground">
+                      Alternative: Highlord’s Wrath (More Attack Speed for Minions)
+                    </p>
+                    <p>&lt;b&gt;Secondary Weapon (Swap): Call to Arms (CTA) + Hoto&lt;/b&gt;</p>
+                    <p className="text-muted-foreground">
+                      +Battle Orders, +Battle Command, +Life Boost
+                    </p>
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="mercenary">
+                <h2 className="text-2xl font-heading text-primary">Mercenary</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="text-foreground font-bold">
+                    Type: Act 2 Nightmare Offensive Mercenary
+                  </p>
+                  <p className="text-foreground font-bold">Helmet: Andariel&apos;s Visage </p>
+                  <p className="text-muted-foreground">Alternative: Guillaume&apos;s Face</p>
+                  <p className="text-foreground font-bold">Weapon: Infinity</p>
+                  <p className="text-muted-foreground">Alternative: Insight</p>
+                  <p className="text-foreground font-bold">Armor: Fortitude</p>
+                  <p className="text-muted-foreground">Alternative: Treachery</p>
+                </div>
+                <div className="mt-4 space-y-2" />
+                <div className="mt-4 space-y-2" />
+              </TabsContent>
+              <TabsContent value="inventory">
+                <h2 className="text-2xl font-heading text-primary">Inventory</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="text-primary-foreground">&lt;b&gt;Grand Charms&lt;/b&gt;</p>
+                  <p className="text-muted-foreground">Druid Summoning Skillers</p>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-primary-foreground">&lt;b&gt;Unique Charms&lt;/b&gt;</p>
+                  <p className="text-muted-foreground">
+                    Hellfire Torch (Druid), Annihilus, Fire Sunder*
+                  </p>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-primary-foreground">&lt;b&gt;Small Charms&lt;/b&gt;</p>
+                  <p className="text-muted-foreground">Life, FHR, Resistances</p>
+                </div>
+              </TabsContent>
+              <TabsContent value="skills">
+                <h2 className="text-2xl font-heading text-primary">Skill Distribution</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="text-foreground">
+                    &lt;b&gt;Primary Skills (Max These First in Order):&lt;/b&gt;
+                  </p>
+                  <p className="text-foreground">Summon Grizzly - Max</p>
+                  <p className="text-foreground">Dire Wolves - Max</p>
+                  <p className="text-foreground">Heart of Wolverines - Max</p>
+                  <p className="text-foreground" />
+                  <p className="text-foreground">&lt;div&gt;&lt;br&gt;&lt;/div&gt;</p>
+                  <p className="text-foreground">
+                    &lt;b&gt;Support Skills (Put 1 Point Each):&lt;/b&gt;
+                  </p>
+                  <p className="text-foreground">Feral Rage - 1 Point</p>
+                  <p className="text-foreground">Rabies - 1 Point</p>
+                  <p className="text-foreground">Carrion Vine - 1 Point</p>
+                  <p className="text-foreground">Cyclone Armor - 1 Point</p>
+                  <p className="text-foreground">
+                    Werewolf / Werebear - 1 Point (Suggested, not Required)
+                  </p>
+                  <p className="text-foreground">&lt;br&gt;</p>
+                </div>
+              </TabsContent>
+              <TabsContent value="attributes">
+                <h2 className="text-2xl font-heading text-primary">Attribute Points</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="text-primary-foreground" />
+                  <p className="text-muted-foreground">Strength: Enough for gear</p>
+                  <p className="text-muted-foreground">Dexterity: Enough for gear and max block</p>
+                  <p className="text-muted-foreground">
+                    Vitality: Dump the rest here (Main Focus)&lt;br&gt;
+                  </p>
+                  <p className="text-muted-foreground">Energy: None</p>
+                </div>
+              </TabsContent>
+              <TabsContent value="breakpoints">
+                <h2 className="text-2xl font-heading text-primary">Breakpoints</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="border-foreground text-foreground">
+                    Faster Cast Rate (FCR) (For Teleporting with Enigma Setup):
+                  </p>
+                  <p className="text-muted-foreground border-foreground">
+                    68% (Good for Teleporting)
+                  </p>
+                  <p className="text-muted-foreground border-foreground">
+                    99% (Ideal for Speedy Teleporting in Chaos/Baal Runs)
+                  </p>
+                  <p className="border-foreground text-foreground">
+                    &lt;b&gt;Faster Hit Recovery (FHR):&lt;/b&gt;
+                  </p>
+                  <p className="text-muted-foreground border-foreground">20% (Basic)</p>
+                  <p className="text-muted-foreground border-foreground">42% (Suggested)</p>
+                  <p className="border-foreground text-foreground font-bold">
+                    Summon Minions Do Not Have Breakpoints, but Faster Summoning Helps!&lt;br&gt;
+                  </p>
+                </div>
+              </TabsContent>
+              <TabsContent value="playstyle">
+                <h2 className="text-2xl font-heading text-primary">Playstyle</h2>
+                <div className="mt-4 space-y-2">
+                  <p className="text-foreground">
+                    Summon Your Army First – Keep Your Grizzly &amp; Wolves Active&lt;br&gt;
+                  </p>
+                  <p className="text-foreground">
+                    Cast Heart of Wolverine (or Oak Sage) – Extra Damage or Life Boost
+                  </p>
+                  <p className="text-foreground">
+                    Teleport (If Using Enigma) to Keep Minions with You&lt;br&gt;
+                  </p>
+                  <p className="text-foreground">
+                    Use Ravens to Blind Enemies – Helps Against Dangerous Mobs
+                  </p>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-foreground">
+                    Let Minions Do the Fighting – Stay Behind &amp; Cast Cyclone Armor for Defense
+                  </p>
+                  <p className="text-foreground">
+                    Recast Minions As Needed – They Tank and Keep You Safe
+                  </p>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-foreground font-bold">Pro Tip:</p>
+                  <p className="text-foreground">
+                    Teleporting with Enigma keeps your summons grouped and aggressive!&lt;br&gt;This
+                    build is perfect for safe, steady damage, with your minions doing the work while
+                    you support them. It&apos;s great for Chaos Sanctuary, Baal Runs, and solo play
+                    where staying safe while dealing consistent damage is key.
+                  </p>
+                </div>
+              </TabsContent>
+            </div>
+          </Tabs>
         </div>
-      </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Select Your Games</CardTitle>
-            <CardDescription>
-              Choose your preferred games to customize your experience
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
-              <div className="flex-1">
-                <h3 className="font-semibold">Diablo II: Resurrected</h3>
-                <p className="text-sm text-muted-foreground">Classic ARPG remastered</p>
-              </div>
-              <Switch />
-            </div>
-            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
-              <div className="flex-1">
-                <h3 className="font-semibold">Project Diablo II</h3>
-                <p className="text-sm text-muted-foreground">Coming Soon</p>
-              </div>
-              <Switch />
-            </div>
-            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
-              <div className="flex-1">
-                <h3 className="font-semibold">Path of Exile 2</h3>
-                <p className="text-sm text-muted-foreground">Coming Soon</p>
-              </div>
-              <Switch />
-            </div>
-            <div className="flex items-center space-x-4 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/5">
-              <div className="flex-1">
-                <h3 className="font-semibold">Runescape</h3>
-                <p className="text-sm text-muted-foreground">Coming Soon</p>
-              </div>
-              <Switch />
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Game Settings</CardTitle>
-            <CardDescription>Configure your D2R preferences</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label>Platform</Label>
-                <div className="grid grid-cols-2 gap-2">
-                  <Button size="sm" variant="outline">
-                    <Monitor className="mr-2 size-4" />
-                    PC
-                  </Button>
-                  <Button size="sm" variant="outline">
-                    <Gamepad2 className="mr-2 size-4" />
-                    Console
-                  </Button>
-                  <Button size="sm" variant="outline">
-                    <Gamepad className="mr-2 size-4" />
-                    Switch
-                  </Button>
-                  <Button size="sm" variant="outline">
-                    <Gamepad className="mr-2 size-4" />
-                    Xbox
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <Label>Game Mode</Label>
-              <RadioGroup defaultValue="softcore-ladder">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem id="softcore-ladder" value="softcore-ladder" />
-                  <Label htmlFor="softcore-ladder">Softcore Ladder</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem id="softcore-nonladder" value="softcore-nonladder" />
-                  <Label htmlFor="softcore-nonladder">Softcore Non-Ladder</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem id="hardcore-ladder" value="hardcore-ladder" />
-                  <Label htmlFor="hardcore-ladder">Hardcore Ladder</Label>
-                </div>
-              </RadioGroup>
-            </div>
-            <div className="space-y-4">
-              <Label>Widget Preferences</Label>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <Switch id="terror-zones" />
-                  <Label htmlFor="terror-zones">Terror Zones</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Switch id="dclone" />
-                  <Label htmlFor="dclone">D Clone Tracker</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Switch id="ladder" />
-                  <Label htmlFor="ladder">Current Ladder Season</Label>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Platform Tags</CardTitle>
-            <CardDescription>Link your gaming accounts</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="battletag">Battle.net Battletag</Label>
-              <Input id="battletag" placeholder="Enter your Battletag" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="psn">PSN Gamer Tag</Label>
-              <Input id="psn" placeholder="Enter your PSN ID" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="xbox">Xbox Gamer Tag</Label>
-              <Input id="xbox" placeholder="Enter your Xbox ID" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="switch">Nintendo Switch Friend Code</Label>
-              <Input id="switch" placeholder="Enter your Friend Code" />
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Account Settings</CardTitle>
-            <CardDescription>Manage your account preferences</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center justify-between rounded-lg bg-secondary/20 p-4">
-              <div>
-                <p className="font-medium">Email Address</p>
-                <p className="text-sm text-muted-foreground">user@example.com</p>
-              </div>
-              <Button size="sm" variant="outline">
-                Edit
-              </Button>
-            </div>
-            <Button variant="outline" className="w-full justify-between">
-              Change Password
-              <Lock className="size-4" />
-            </Button>
-            <Button variant="outline" className="w-full justify-between">
-              Order History
-              <Clock className="size-4" />
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-      <div className="flex justify-end">
-        <Button>
-          <Save className="mr-2 size-4" />
-          Save Changes
-        </Button>
+        <Tabs defaultValue="gear" className="mb-8 w-full">
+          <TabsContent value="gear">
+            <div className="gap-8 block" />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );

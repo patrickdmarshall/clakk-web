@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function Section2() {
   return (
-    <div className="container mx-auto pb-12 pt-8">
+    <div className="container mx-auto pt-8 pb-12">
       <nav className="mb-8">
         <ol className="flex space-x-2 text-sm text-muted-foreground">
           <li className="flex items-center">
@@ -36,30 +36,29 @@ export function Section2() {
               src="/images/jah.png"
               width={600}
               height={600}
-              alt="A description of the image" // Add this line
-              className="object-cover"
+              className="h-full w-full object-cover bg-primary/10 p-20"
             />
           </div>
         </div>
         <div className="space-y-6">
           <div className="space-y-2">
-            <h1 className="font-heading text-4xl font-bold">10x Jah Rune</h1>
-            <p className="max-w-md text-sm text-muted-foreground">Softcore Ladder</p>
+            <h1 className="font-heading font-bold text-4xl">10x Jah Rune</h1>
+            <p className="text-sm text-muted-foreground max-w-md">Softcore Ladder</p>
           </div>
-          <div className="font-heading text-3xl font-bold">$100.00</div>
+          <div className="font-bold font-heading text-3xl">$100.00</div>
           <div className="space-y-4">
             <div />
             <div />
           </div>
           <Separator orientation="horizontal" className="my-4" />
           <div className="flex items-center space-x-4">
-            <div className="flex items-center rounded-full bg-input px-4 py-2">
-              <button className="text-muted-foreground transition-colors hover:text-foreground">
-                <Minus className="size-4" />
+            <div className="flex items-center rounded-full px-4 py-2 bg-input">
+              <button className="text-muted-foreground hover:text-foreground transition-colors">
+                <Minus className="h-4 w-4" />
               </button>
               <span className="mx-4 font-medium">1</span>
-              <button className="text-muted-foreground transition-colors hover:text-foreground">
-                <Plus className="size-4" />
+              <button className="text-muted-foreground hover:text-foreground transition-colors">
+                <Plus className="h-4 w-4" />
               </button>
             </div>
             <div className="text-sm">
@@ -70,18 +69,18 @@ export function Section2() {
           </div>
           <div className="flex space-x-4">
             <Button className="flex-1">
-              <ShoppingCart className="mr-2 size-5" />
+              <ShoppingCart className="mr-2 h-5 w-5" />
               Add to cart
             </Button>
             <Button size="icon" variant="outline">
-              <Heart className="size-5" />
+              <Heart className="h-5 w-5" />
             </Button>
           </div>
           <div>
-            <div className="space-y-4 rounded-sm border bg-card p-4">
+            <div className="space-y-4 p-4 border bg-card rounded-sm">
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-primary/10 p-2">
-                  <Package className="size-5 text-primary" />
+                <div className="p-2 rounded-full bg-primary/10">
+                  <Package className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-heading text-base font-medium">Fast Delivery</h4>
@@ -92,8 +91,8 @@ export function Section2() {
               </div>
               <Separator className="bg-accent" />
               <div className="flex items-center gap-3">
-                <div className="rounded-full bg-primary/10 p-2">
-                  <RefreshCcw className="size-5 text-primary" />
+                <div className="p-2 rounded-full bg-primary/10">
+                  <RefreshCcw className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-heading text-base font-medium">Free Platform Selection</h4>

@@ -1,241 +1,190 @@
-import Image from "next/image";
-import { Settings, Sword, Shield, Backpack, Sparkles, Star, Gauge, Gamepad2 } from "lucide-react";
+import { LogOut, Monitor, Gamepad2, Gamepad, Lock, Clock, Save } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Input } from "@/components/ui/input";
 
 export function Section20() {
   return (
-    <div className="min-h-screen bg-background p-8">
-      <div className="mx-auto max-w-5xl">
-        <div className="container mx-auto block px-4 py-16 text-center">
-          <h2 className="mb-8 font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Bone Spear Guide
-          </h2>
-          <Image alt="Image" src="/images/nec.jpg" width={500} height={500} />
-          <div className="mx-auto max-w-4xl" />
-          <div className="flex flex-row items-start justify-center gap-4 p-[20px]">
-            <Button className="bg-[#3A6A3A] hover:bg-[#2A5A2A]">Add Build to Cart</Button>
-            <Button variant="outline" className="flex items-center gap-2">
-              <Settings className="size-4" />
-              Customize Build
-            </Button>
-          </div>
-          <Tabs defaultValue="gear" className="w-full">
-            <TabsList className="grid h-14 w-full grid-cols-7 gap-4 bg-card/50 p-1">
-              <TabsTrigger
-                value="gear"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Sword className="size-4" />
-                <span>Gear</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="mercenary"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Shield className="size-4" />
-                <span>Mercenary</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="inventory"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Backpack className="size-4" />
-                <span>Inventory</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="skills"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Sparkles className="size-4" />
-                <span>Skills</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="attributes"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Star className="size-4" />
-                <span>Attributes</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="breakpoints"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Gauge className="size-4" />
-                <span>Breakpoints</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="playstyle"
-                className="flex items-center gap-2 data-[state=active]:bg-primary/20"
-              >
-                <Gamepad2 className="size-4" />
-                <span>Playstyle</span>
-              </TabsTrigger>
-            </TabsList>
-            <div className="mt-4 rounded-lg border border-border/50 bg-card/50 p-6">
-              <TabsContent value="gear">
-                <div className="space-y-4">
-                  <h2 className="font-heading text-2xl text-primary">Gear</h2>
-                  <div className="space-y-2">
-                    <p className="border-primary-foreground">
-                      Weapon: White Runeword in a +3 Bone Spear Wand
-                    </p>
-                    <p className="text-muted-foreground">
-                      Alternative: Heart of the Oak (Hoto) for Resistances &amp; FCR&lt;br&gt;
-                    </p>
-                    <p>Shield: Spirit Monarch</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Homunculus (If Going Max Block)
-                    </p>
-                  </div>
-                  <div className="space-y-2">
-                    <p>Helmet: Shako</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Rare Circlet (+2 Necro Skills, 20% FCR)
-                    </p>
-                    <p>Armor: Enigma</p>
-                    <p className="text-muted-foreground">Alternative: None</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p>Gloves: Trang-Oul&apos;s</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Magefist (FCR &amp; Mana Regen)
-                    </p>
-                    <p>Belt: Arachnid Mesh</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Verdungo’s (For Life &amp; DR)
-                    </p>
-                  </div>
-                  <div className="space-y-2">
-                    <p>Boots: Marrowwalk</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Sandstorm Trek (For Poison Resist &amp; Strength)
-                    </p>
-                    <p>Rings: Stone of Jordan (SoJ) &amp; Ravenfrost</p>
-                    <p className="text-muted-foreground">Alternative: 2x Stone of Jordan (SoJ)</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p>Amulet: Mara’s Kaleidoscope</p>
-                    <p className="text-muted-foreground">
-                      Alternative: Rare Necromancer Amulet (FCR, Life, Resists)
-                    </p>
-                    <p>&lt;b&gt;Secondary Weapon (Swap): Call to Arms (CTA) + Hoto&lt;/b&gt;</p>
-                    <p className="text-muted-foreground">
-                      +Battle Orders, +Battle Command, +Life Boost
-                    </p>
-                  </div>
-                </div>
-              </TabsContent>
-              <TabsContent value="mercenary">
-                <h2 className="font-heading text-2xl text-primary">Mercenary</h2>
-                <div className="mt-4 space-y-2">
-                  <p className="font-bold text-foreground">
-                    Type: Act 2 Nightmare Offensive Mercenary
-                  </p>
-                  <p className="font-bold text-foreground">Helmet: Andariel&apos;s Visage </p>
-                  <p className="text-muted-foreground">Alternative: Guillaume&apos;s Face</p>
-                  <p className="font-bold text-foreground">Weapon: Infinity</p>
-                  <p className="text-muted-foreground">Alternative: Insight</p>
-                  <p className="font-bold text-foreground">Armor: Fortitude</p>
-                  <p className="text-muted-foreground">Alternative: Treachery</p>
-                </div>
-                <div className="mt-4 space-y-2" />
-                <div className="mt-4 space-y-2" />
-              </TabsContent>
-              <TabsContent value="inventory">
-                <h2 className="font-heading text-2xl text-primary">Inventory</h2>
-                <div className="mt-4 space-y-2">
-                  <p className="text-primary-foreground">&lt;b&gt;Grand Charms&lt;/b&gt;</p>
-                  <p className="text-muted-foreground">Poison &amp; Bone Skillers</p>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-primary-foreground">&lt;b&gt;Unique Charms&lt;/b&gt;</p>
-                  <p className="text-muted-foreground">Hellfire Torch (Necromancer), Annihilus</p>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <p className="text-primary-foreground">&lt;b&gt;Small Charms&lt;/b&gt;</p>
-                  <p className="text-muted-foreground">Life, Resists, Faster Hit Recovery</p>
-                </div>
-              </TabsContent>
-              <TabsContent value="skills">
-                <h2 className="font-heading text-2xl text-primary">Skill Distribution</h2>
-                <div className="mt-4 space-y-2">
-                  <p className="text-foreground">
-                    &lt;b&gt;Primary Skills (Max These First in Order):&lt;/b&gt;
-                  </p>
-                  <p className="text-foreground">Bone Spear - Max</p>
-                  <p className="text-foreground">Bone Spirit - Max</p>
-                  <p className="text-foreground">Bone Wall - Max</p>
-                  <p className="text-foreground">Bone Prison - Max</p>
-                  <p className="text-foreground">Teeth - Max</p>
-                  <p className="text-foreground" />
-                  <p className="text-foreground">&lt;div&gt;&lt;br&gt;&lt;/div&gt;</p>
-                  <p className="text-foreground">
-                    &lt;b&gt;Support Skills (Put 1 Point Each):&lt;/b&gt;
-                  </p>
-                  <p className="text-foreground">Bone Armor - 1 Point</p>
-                  <p className="text-foreground">Corpse Explosion – 1 Point</p>
-                  <p className="text-foreground">Amplify Damage – 1 Point</p>
-                  <p className="text-foreground">Clay Golem – 1 Point</p>
-                  <p className="text-foreground">Golem Mastery – 1 Point</p>
-                  <p className="text-foreground">Summon Resist – 1 Point</p>
-                  <p className="text-foreground">&lt;br&gt;</p>
-                </div>
-              </TabsContent>
-              <TabsContent value="attributes">
-                <h2 className="font-heading text-2xl text-primary">Attribute Points</h2>
-                <div className="mt-4 space-y-2">
-                  <p className="text-primary-foreground" />
-                  <p className="text-muted-foreground">Strength: Enough for gear</p>
-                  <p className="text-muted-foreground">
-                    Dexterity: Enough for gear and max block if using Homunculus
-                  </p>
-                  <p className="text-muted-foreground">
-                    Vitality: Dump the rest here (Main Focus)&lt;br&gt;
-                  </p>
-                  <p className="text-muted-foreground">Energy: None</p>
-                </div>
-              </TabsContent>
-              <TabsContent value="breakpoints">
-                <h2 className="font-heading text-2xl text-primary">Breakpoints</h2>
-                <div className="mt-4 space-y-2">
-                  <p className="border-foreground text-foreground">Faster Cast Rate (FCR):</p>
-                  <p className="border-foreground text-muted-foreground">48% (Basic)</p>
-                  <p className="border-foreground text-muted-foreground">75% (Optimal)</p>
-                  <p className="border-foreground text-muted-foreground">125% (Suggested)</p>
-                  <p className="border-foreground text-foreground">
-                    &lt;b&gt;Faster Hit Recovery (FHR):&lt;/b&gt;
-                  </p>
-                  <p className="border-foreground text-muted-foreground">29% (Basic)</p>
-                  <p className="border-foreground text-muted-foreground">56% (Suggested)</p>
-                </div>
-              </TabsContent>
-              <TabsContent value="playstyle">
-                <h2 className="font-heading text-2xl text-primary">Playstyle</h2>
-                <div className="mt-4 space-y-2">
-                  <p className="text-foreground">Spam Bone Spear for High DPS</p>
-                  <p className="text-foreground">Use Bone Spirit for Bosses&lt;br&gt;</p>
-                  <p className="text-foreground">Bone Prison for Crowd Control</p>
-                  <p className="text-foreground">Cast Amplify Damage on Physical Immunes</p>
-                </div>
-                <div className="mt-4 space-y-2" />
-                <div className="mt-4 space-y-2">
-                  <p className="font-bold text-foreground">Pro Tip:</p>
-                  <p className="text-foreground">
-                    Bone Spear pierces through enemies, so try to line up multiple targets for max
-                    efficiency!
-                  </p>
-                </div>
-              </TabsContent>
-            </div>
-          </Tabs>
+    <div className="p-8 max-w-6xl mx-auto space-y-8">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-4xl font-heading font-bold">Welcome back, Chad!</h1>
+          <p className="text-muted-foreground mt-2">Your Clakk Experience Awaits</p>
         </div>
-        <Tabs defaultValue="gear" className="mb-8 w-full">
-          <TabsContent value="gear">
-            <div className="block gap-8" />
-          </TabsContent>
-        </Tabs>
+        <div className="flex items-center gap-4">
+          <div className="bg-secondary/20 px-4 py-2 rounded-lg">
+            <p className="text-sm text-muted-foreground">Reward Points</p>
+            <p className="font-bold">2,500 pts</p>
+          </div>
+          <Button size="sm" variant="outline">
+            <LogOut className="w-4 h-4 mr-2" />
+            Logout
+          </Button>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Select Your Games</CardTitle>
+            <CardDescription>
+              Choose your preferred games to customize your experience
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+              <div className="flex-1">
+                <h3 className="font-semibold">Diablo II: Resurrected</h3>
+                <p className="text-sm text-muted-foreground">Classic ARPG remastered</p>
+              </div>
+              <Switch />
+            </div>
+            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+              <div className="flex-1">
+                <h3 className="font-semibold">Project Diablo II</h3>
+                <p className="text-sm text-muted-foreground">Coming Soon</p>
+              </div>
+              <Switch />
+            </div>
+            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+              <div className="flex-1">
+                <h3 className="font-semibold">Path of Exile 2</h3>
+                <p className="text-sm text-muted-foreground">Coming Soon</p>
+              </div>
+              <Switch />
+            </div>
+            <div className="flex items-center space-x-4 p-4 rounded-lg border bg-card hover:bg-accent/5 transition-colors">
+              <div className="flex-1">
+                <h3 className="font-semibold">Runescape</h3>
+                <p className="text-sm text-muted-foreground">Coming Soon</p>
+              </div>
+              <Switch />
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Game Settings</CardTitle>
+            <CardDescription>Configure your D2R preferences</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label>Platform</Label>
+                <div className="grid grid-cols-2 gap-2">
+                  <Button size="sm" variant="outline">
+                    <Monitor className="h-4 w-4 mr-2" />
+                    PC
+                  </Button>
+                  <Button size="sm" variant="outline">
+                    <Gamepad2 className="h-4 w-4 mr-2" />
+                    Console
+                  </Button>
+                  <Button size="sm" variant="outline">
+                    <Gamepad className="h-4 w-4 mr-2" />
+                    Switch
+                  </Button>
+                  <Button size="sm" variant="outline">
+                    <Gamepad className="h-4 w-4 mr-2" />
+                    Xbox
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <Label>Game Mode</Label>
+              <RadioGroup defaultValue="softcore-ladder">
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem id="softcore-ladder" value="softcore-ladder" />
+                  <Label htmlFor="softcore-ladder">Softcore Ladder</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem id="softcore-nonladder" value="softcore-nonladder" />
+                  <Label htmlFor="softcore-nonladder">Softcore Non-Ladder</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem id="hardcore-ladder" value="hardcore-ladder" />
+                  <Label htmlFor="hardcore-ladder">Hardcore Ladder</Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="space-y-4">
+              <Label>Widget Preferences</Label>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <Switch id="terror-zones" />
+                  <Label htmlFor="terror-zones">Terror Zones</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Switch id="dclone" />
+                  <Label htmlFor="dclone">D Clone Tracker</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Switch id="ladder" />
+                  <Label htmlFor="ladder">Current Ladder Season</Label>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Platform Tags</CardTitle>
+            <CardDescription>Link your gaming accounts</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="battletag">Battle.net Battletag</Label>
+              <Input id="battletag" placeholder="Enter your Battletag" />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="psn">PSN Gamer Tag</Label>
+              <Input id="psn" placeholder="Enter your PSN ID" />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="xbox">Xbox Gamer Tag</Label>
+              <Input id="xbox" placeholder="Enter your Xbox ID" />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="switch">Nintendo Switch Friend Code</Label>
+              <Input id="switch" placeholder="Enter your Friend Code" />
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Account Settings</CardTitle>
+            <CardDescription>Manage your account preferences</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between p-4 bg-secondary/20 rounded-lg">
+              <div>
+                <p className="font-medium">Email Address</p>
+                <p className="text-sm text-muted-foreground">user@example.com</p>
+              </div>
+              <Button size="sm" variant="outline">
+                Edit
+              </Button>
+            </div>
+            <Button variant="outline" className="w-full justify-between">
+              Change Password
+              <Lock className="w-4 h-4" />
+            </Button>
+            <Button variant="outline" className="w-full justify-between">
+              Order History
+              <Clock className="w-4 h-4" />
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="flex justify-end">
+        <Button>
+          <Save className="w-4 h-4 mr-2" />
+          Save Changes
+        </Button>
       </div>
     </div>
   );
